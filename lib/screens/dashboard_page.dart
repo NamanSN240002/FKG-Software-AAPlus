@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:recommender_app/utilities/apiservices.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -28,10 +29,10 @@ class DashboardPage extends StatelessWidget {
             items: [
               //1st Image of Slider
               Container(
-                margin: EdgeInsets.all(6.0),
+                margin: const EdgeInsets.all(6.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     image: NetworkImage(
                         "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8UHJvZHVjdHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"),
                     fit: BoxFit.cover,
@@ -41,10 +42,10 @@ class DashboardPage extends StatelessWidget {
 
               //2nd Image of Slider
               Container(
-                margin: EdgeInsets.all(6.0),
+                margin: const EdgeInsets.all(6.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     image: NetworkImage(
                         "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8UHJvZHVjdHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"),
                     fit: BoxFit.cover,
@@ -54,10 +55,10 @@ class DashboardPage extends StatelessWidget {
 
               //3rd Image of Slider
               Container(
-                margin: EdgeInsets.all(6.0),
+                margin: const EdgeInsets.all(6.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     image: NetworkImage(
                         "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8UHJvZHVjdHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"),
                     fit: BoxFit.cover,
@@ -67,10 +68,10 @@ class DashboardPage extends StatelessWidget {
 
               //4th Image of Slider
               Container(
-                margin: EdgeInsets.all(6.0),
+                margin: const EdgeInsets.all(6.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     image: NetworkImage(
                         "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8UHJvZHVjdHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"),
                     fit: BoxFit.cover,
@@ -80,10 +81,10 @@ class DashboardPage extends StatelessWidget {
 
               //5th Image of Slider
               Container(
-                margin: EdgeInsets.all(6.0),
+                margin: const EdgeInsets.all(6.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     image: NetworkImage(
                         "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8UHJvZHVjdHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"),
                     fit: BoxFit.cover,
@@ -100,7 +101,7 @@ class DashboardPage extends StatelessWidget {
               aspectRatio: 16 / 9,
               autoPlayCurve: Curves.fastOutSlowIn,
               enableInfiniteScroll: true,
-              autoPlayAnimationDuration: Duration(milliseconds: 800),
+              autoPlayAnimationDuration: const Duration(milliseconds: 800),
               viewportFraction: 0.8,
             ),
           ),
@@ -123,10 +124,10 @@ class DashboardPage extends StatelessWidget {
             items: [
               //1st Image of Slider
               Container(
-                margin: EdgeInsets.all(6.0),
+                margin: const EdgeInsets.all(6.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     image: NetworkImage(
                         "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8UHJvZHVjdHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"),
                     fit: BoxFit.cover,
@@ -136,10 +137,10 @@ class DashboardPage extends StatelessWidget {
 
               //2nd Image of Slider
               Container(
-                margin: EdgeInsets.all(6.0),
+                margin: const EdgeInsets.all(6.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     image: NetworkImage(
                         "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8UHJvZHVjdHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"),
                     fit: BoxFit.cover,
@@ -149,10 +150,10 @@ class DashboardPage extends StatelessWidget {
 
               //3rd Image of Slider
               Container(
-                margin: EdgeInsets.all(6.0),
+                margin: const EdgeInsets.all(6.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     image: NetworkImage(
                         "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8UHJvZHVjdHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"),
                     fit: BoxFit.cover,
@@ -162,10 +163,10 @@ class DashboardPage extends StatelessWidget {
 
               //4th Image of Slider
               Container(
-                margin: EdgeInsets.all(6.0),
+                margin: const EdgeInsets.all(6.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     image: NetworkImage(
                         "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8UHJvZHVjdHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"),
                     fit: BoxFit.cover,
@@ -175,10 +176,10 @@ class DashboardPage extends StatelessWidget {
 
               //5th Image of Slider
               Container(
-                margin: EdgeInsets.all(6.0),
+                margin: const EdgeInsets.all(6.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     image: NetworkImage(
                         "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8UHJvZHVjdHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"),
                     fit: BoxFit.cover,
@@ -195,7 +196,7 @@ class DashboardPage extends StatelessWidget {
               aspectRatio: 16 / 9,
               autoPlayCurve: Curves.fastOutSlowIn,
               enableInfiniteScroll: true,
-              autoPlayAnimationDuration: Duration(milliseconds: 800),
+              autoPlayAnimationDuration: const Duration(milliseconds: 800),
               viewportFraction: 0.8,
             ),
           ),

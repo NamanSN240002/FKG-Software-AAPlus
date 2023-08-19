@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:recommender_app/screens/dashboard_page.dart';
-import 'package:recommender_app/screens/search_page.dart';
-import 'package:recommender_app/screens/profile_page.dart';
+import 'package:recommender_app/home_page.dart';
+import 'package:recommender_app/messages.dart';
+// import 'package:recommender_app/profile_page.dart';
 
 class TabPage extends StatefulWidget {
   const TabPage({Key? key}) : super(key: key);
@@ -19,9 +19,9 @@ class _TabPageState extends State<TabPage> {
       body: IndexedStack(
         index: selectedTab,
         children: const <Widget>[
-          DashboardPage(),
-          SearchPage(),
-          SettingsPage(),
+          // HomePage(),
+          // MessagesScreen(),
+          // SettingsPage(),
         ],
       ),
       bottomNavigationBar: NavigationBar(
