@@ -36,11 +36,14 @@ class ItemData extends StatelessWidget {
                 // color: Colors.pink,
                 width: double.infinity,
                 height: 350,
-                child: Image.network(
-                  data['image']
-                      .split(',')[1]
-                      .substring(2, data['image'].split(',')[1].length - 1),
-                  fit: BoxFit.cover,
+                child: FadeInImage(
+                  placeholder:
+                      AssetImage('lib/console.png'), // Placeholder image
+                  image: NetworkImage(data['image']
+                      .split(',')[0]
+                      .split('\"')[1]), // Network image URL
+                  fit: BoxFit
+                      .contain, // How the image should be fitted within the widget
                 ),
               ),
               Container(
@@ -71,7 +74,7 @@ class ItemData extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              data['discounted_price'].toString(),
+                              "\$${data['discounted_price']}",
                               style: GoogleFonts.poppins(
                                   fontSize: 25, fontWeight: FontWeight.w600),
                             )
@@ -137,12 +140,15 @@ class ItemData extends StatelessWidget {
                       ),
                       Container(
                         margin: EdgeInsets.symmetric(horizontal: 24),
-                        child: TextButton(
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.black, // Background color
+                          ),
                           onPressed: () {
                             _launchURLBrowser(Uri.parse(data['url']));
                           },
                           child: Text(
-                            data['url'],
+                            "Link to FlipKart!",
                             style: GoogleFonts.poppins(fontSize: 12),
                           ),
                         ),

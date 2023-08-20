@@ -5,10 +5,10 @@ import 'package:flutter/services.dart';
 import 'package:page_transition/page_transition.dart';
 
 class WelcomePage2 extends StatefulWidget {
-  const WelcomePage2({super.key});
-
+  const WelcomePage2({super.key, required this.user});
+  final user;
   @override
-  State<WelcomePage2> createState() => _WelcomePage2State();
+  State<WelcomePage2> createState() => _WelcomePage2State(user);
 }
 
 class _WelcomePage2State extends State<WelcomePage2> {
@@ -21,6 +21,8 @@ class _WelcomePage2State extends State<WelcomePage2> {
     ));
   }
 
+  _WelcomePage2State(this.user);
+  final user;
   @override
   Widget build(BuildContext context) {
     var sz = MediaQuery.maybeOf(context)!.size;
@@ -40,19 +42,19 @@ class _WelcomePage2State extends State<WelcomePage2> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                'Explore the',
+                'Explore',
                 style: GoogleFonts.poppins(
                     textStyle:
                         TextStyle(fontSize: 38, fontWeight: FontWeight.w500)),
               ),
               Text(
-                'Fashion Trends',
+                'Our',
                 style: GoogleFonts.poppins(
                     textStyle:
                         TextStyle(fontSize: 38, fontWeight: FontWeight.w500)),
               ),
               Text(
-                'We form and assortment that follows trend',
+                'wide variety and personalized recommendations we have!',
                 style: GoogleFonts.poppins(
                     textStyle: TextStyle(fontSize: 15, color: Colors.grey)),
               )
@@ -77,10 +79,11 @@ class _WelcomePage2State extends State<WelcomePage2> {
               ClipRRect(
                 borderRadius: BorderRadius.circular(18),
                 child: ElevatedButton(
-                    onPressed: () => Navigator.push(
+                    onPressed: () => Navigator.pushReplacement(
                         context,
                         PageTransition(
-                            type: PageTransitionType.fade, child: Loading())),
+                            type: PageTransitionType.fade,
+                            child: Loading(user: user))),
                     style: ElevatedButton.styleFrom(
                         primary: Colors.black87,
                         padding:

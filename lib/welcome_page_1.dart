@@ -2,10 +2,11 @@ import 'package:recommender_app/welcome_page_2.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:recommender_app/loader.dart';
 
 class WelcomePage1 extends StatelessWidget {
-  const WelcomePage1({super.key});
-
+  const WelcomePage1({super.key, required this.user});
+  final user;
   @override
   Widget build(BuildContext context) {
     var sz = MediaQuery.maybeOf(context)!.size;
@@ -40,7 +41,7 @@ class WelcomePage1 extends StatelessWidget {
                         TextStyle(fontSize: 40, fontWeight: FontWeight.w500)),
               ),
               Text(
-                'Picking up accessories from popular European brand',
+                'Picking up what is best for you!',
                 style: GoogleFonts.poppins(
                     textStyle: TextStyle(fontSize: 15, color: Colors.grey)),
               )
@@ -56,7 +57,11 @@ class WelcomePage1 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               TextButton(
-                  onPressed: () {},
+                  onPressed: () => Navigator.pushReplacement(
+                      context,
+                      PageTransition(
+                          type: PageTransitionType.rightToLeft,
+                          child: Loading(user: user))),
                   child: Text(
                     'Skip',
                     style: TextStyle(
@@ -65,11 +70,11 @@ class WelcomePage1 extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(18),
                 child: ElevatedButton(
-                    onPressed: () => Navigator.push(
+                    onPressed: () => Navigator.pushReplacement(
                         context,
                         PageTransition(
                             type: PageTransitionType.rightToLeft,
-                            child: WelcomePage2())),
+                            child: WelcomePage2(user: user))),
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.black87,
                         padding:

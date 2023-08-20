@@ -1,30 +1,12 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:recommender_app/utilities/apiservices.dart';
-import 'package:recommender_app/tab_page.dart';
+import './welcome_page_1.dart';
 
 void main() {
   runApp(const Login());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'NavigationBar',
-      theme: ThemeData(
-        primarySwatch: Colors.orange,
-        navigationBarTheme: NavigationBarThemeData(
-          backgroundColor: Colors.orange.shade100,
-          indicatorColor: Colors.orange.shade700,
-        ),
-      ),
-      home: const TabPage(),
-    );
-  }
 }
 
 class Login extends StatefulWidget {
@@ -43,7 +25,7 @@ class _LoginState extends State<Login> {
       appBar: AppBar(
         title: const Text('Login'),
         centerTitle: true,
-        backgroundColor: Colors.cyan,
+        backgroundColor: Color(0xff23272C),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -52,19 +34,28 @@ class _LoginState extends State<Login> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(
-                Icons.medical_services,
-                size: 42,
-                color: Colors.cyan,
-              ),
-              const Text(
-                "MEDICOS",
-                style: TextStyle(
-                    fontSize: 42,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.cyan),
-              ),
               const SizedBox(height: 30),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(
+                    Icons.shopping_cart_checkout,
+                    size: 42,
+                    color: Color(0xff23272C),
+                  ),
+                  const SizedBox(width: 20),
+                  const Text(
+                    "GRIDKART",
+                    style: TextStyle(
+                      fontSize: 42,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xff23272C),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 100),
               TextFormField(
                 controller: userSsn,
                 decoration: const InputDecoration(hintText: 'Email'),
@@ -92,7 +83,11 @@ class _LoginState extends State<Login> {
                       ScaffoldMessenger.of(context)
                           .showSnackBar(SnackBar(content: Text(emsg)));
                     } else {
-                      Navigator.pushReplacementNamed(context, '/home');
+                      Navigator.pushReplacement(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.rightToLeft,
+                              child: WelcomePage1(user: ret['user'])));
                     }
                   } else {
                     var info_ = jsonDecode(log.res.body);
@@ -103,10 +98,13 @@ class _LoginState extends State<Login> {
                 child: Container(
                   height: 50,
                   decoration: BoxDecoration(
-                      color: Colors.cyan,
+                      color: Colors.grey.shade700,
                       borderRadius: BorderRadius.circular(10)),
                   child: const Center(
-                    child: Text('Login'),
+                    child: Text(
+                      'Login',
+                      style: TextStyle(color: Colors.white70),
+                    ),
                   ),
                 ),
               ),
@@ -116,9 +114,16 @@ class _LoginState extends State<Login> {
               const Text("Dont have an account?"),
               TextButton(
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, '/register');
+                    Navigator.pushReplacement(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.rightToLeft,
+                            child: Register()));
                   },
-                  child: const Text("Register!")),
+                  child: const Text(
+                    "Register!",
+                    style: TextStyle(color: Colors.black87),
+                  )),
             ],
           ),
         ),
@@ -148,7 +153,7 @@ class _RegisterState extends State<Register> {
       appBar: AppBar(
         title: const Text('Sign Up'),
         centerTitle: true,
-        backgroundColor: Colors.cyan,
+        backgroundColor: Color(0xff23272C),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -157,22 +162,30 @@ class _RegisterState extends State<Register> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(
-                Icons.medical_services,
-                size: 42,
-                color: Colors.cyan,
-              ),
-              const Text(
-                "MEDICOS",
-                style: TextStyle(
-                    fontSize: 42,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.cyan),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(
+                    Icons.shopping_cart_checkout,
+                    size: 42,
+                    color: Color(0xff23272C),
+                  ),
+                  const SizedBox(width: 20),
+                  const Text(
+                    "GRIDKART",
+                    style: TextStyle(
+                      fontSize: 42,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xff23272C),
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(height: 30),
               TextFormField(
                 controller: userSsnController,
-                decoration: const InputDecoration(hintText: 'Email'),
+                decoration: const InputDecoration(hintText: 'SSN'),
               ),
               const SizedBox(
                 height: 20,
@@ -186,28 +199,28 @@ class _RegisterState extends State<Register> {
               ),
               TextFormField(
                 controller: sexController,
-                decoration: const InputDecoration(hintText: 'Name'),
+                decoration: const InputDecoration(hintText: 'Sex'),
               ),
               const SizedBox(
                 height: 20,
               ),
               TextFormField(
                 controller: jobController,
-                decoration: const InputDecoration(hintText: 'Name'),
+                decoration: const InputDecoration(hintText: 'Job'),
               ),
               const SizedBox(
                 height: 20,
               ),
               TextFormField(
                 controller: companyController,
-                decoration: const InputDecoration(hintText: 'Name'),
+                decoration: const InputDecoration(hintText: 'Company'),
               ),
               const SizedBox(
                 height: 20,
               ),
               TextFormField(
                 controller: dobController,
-                decoration: const InputDecoration(hintText: 'Name'),
+                decoration: const InputDecoration(hintText: 'Date of Birth'),
               ),
               const SizedBox(
                 height: 20,
@@ -235,16 +248,24 @@ class _RegisterState extends State<Register> {
                     ScaffoldMessenger.of(context)
                         .showSnackBar(SnackBar(content: Text(emsg)));
                   } else {
-                    Navigator.pushReplacementNamed(context, '/home');
+                    Navigator.pushReplacement(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.rightToLeft,
+                            child:
+                                WelcomePage1(user: registerApi.ret["output"])));
                   }
                 },
                 child: Container(
                   height: 50,
                   decoration: BoxDecoration(
-                      color: Colors.cyan,
+                      color: Colors.grey.shade700,
                       borderRadius: BorderRadius.circular(10)),
                   child: const Center(
-                    child: Text('Sign Up'),
+                    child: Text(
+                      'Sign Up',
+                      style: TextStyle(color: Colors.white70),
+                    ),
                   ),
                 ),
               ),
@@ -254,9 +275,16 @@ class _RegisterState extends State<Register> {
               const Text("Already have an account?"),
               TextButton(
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, '/');
+                    Navigator.pushReplacement(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.rightToLeft,
+                            child: Login()));
                   },
-                  child: const Text("Login!")),
+                  child: const Text(
+                    "Login!",
+                    style: TextStyle(color: Colors.black87),
+                  )),
             ],
           ),
         ),

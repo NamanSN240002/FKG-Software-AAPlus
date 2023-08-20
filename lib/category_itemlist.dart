@@ -61,10 +61,18 @@ class _CategoryItemListState extends State<CategoryItemList> {
                                 children: <Widget>[
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(20),
-                                    child: Image.asset(
-                                      'lib/console.png',
+                                    child: Container(
                                       height: 100,
-                                      fit: BoxFit.cover,
+                                      child: FadeInImage(
+                                        placeholder: AssetImage(
+                                            'lib/console.png'), // Placeholder image
+                                        image: NetworkImage(ret[index]['image']
+                                            .split(',')[0]
+                                            .split(
+                                                '\"')[1]), // Network image URL
+                                        fit: BoxFit
+                                            .scaleDown, // How the image should be fitted within the widget
+                                      ),
                                     ),
                                   ),
                                   Align(
@@ -89,7 +97,7 @@ class _CategoryItemListState extends State<CategoryItemList> {
                                     fontWeight: FontWeight.w500),
                               ),
                               Text(
-                                ret[index]['discounted_price'].toString(),
+                                "\$${ret[index]['discounted_price']}",
                                 style: TextStyle(
                                     fontWeight: FontWeight.w900, fontSize: 15),
                               ),

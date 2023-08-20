@@ -1,23 +1,5 @@
-// import 'package:flutter/material.dart';
-// import 'package:recommender_app/screens/successful_main.dart';
-
-// void main() => runApp(MaterialApp(
-//       initialRoute: '/',
-//       routes: {
-//         '/': (context) => const Login(),
-//         '/register': (context) => const Register(),
-//         '/home': (context) => const MyApp()
-//       },
-//     ));
-
 import 'package:flutter/material.dart';
-import './welcome_page_1.dart';
-import './welcome_page_2.dart';
-import './home_page.dart';
-import 'package:flutter/services.dart';
-import './categories.dart';
-import './category_itemlist.dart';
-import './item_data.dart';
+import 'package:recommender_app/successful_main.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,7 +17,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WelcomePage1(),
+      home: Login(),
     );
   }
 }

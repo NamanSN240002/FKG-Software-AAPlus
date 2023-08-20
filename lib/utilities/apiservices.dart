@@ -1,7 +1,7 @@
 import 'package:http/http.dart';
 import 'dart:convert';
 
-const String urlendpoint = "http://2ed2-34-74-219-159.ngrok.io";
+const String urlendpoint = "http://4484-34-82-3-13.ngrok.io";
 
 class GetCategoryProd {
   late String category;
@@ -10,7 +10,7 @@ class GetCategoryProd {
   Future<void> getRecommendation() async {
     Response response = await post(
         // Uri.parse('http://10.0.2.2:5000/'),
-        Uri.parse('$urlendpoint/category_prod'),
+        Uri.parse('$urlendpoint/category_prod5'),
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
           // 'Content-Type': 'multipart/form-data'
