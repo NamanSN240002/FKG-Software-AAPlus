@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MessagesScreen extends StatefulWidget {
   final List messages;
@@ -9,6 +10,9 @@ class MessagesScreen extends StatefulWidget {
 }
 
 class _MessagesScreenState extends State<MessagesScreen> {
+  _launchURLBrowser(url) async {
+    launchUrl(url);
+  }
   @override
   Widget build(BuildContext context) {
     var w = MediaQuery.of(context).size.width;
@@ -37,7 +41,14 @@ class _MessagesScreenState extends State<MessagesScreen> {
                             ? Colors.grey.shade800
                             : Colors.grey.shade900.withOpacity(0.8)),
                     constraints: BoxConstraints(maxWidth: w * 2 / 3),
-                    child: Text(
+                    child: widget.messages[index].containsKey('url') ? 
+                    TextButton(onPressed: (){
+                      _launchURLBrowser(Uri.parse(widget.messages[index]['url']));
+                    }, child: Text(
+                      widget.messages[index]['message'],
+                      style: TextStyle(color: Colors.white),
+                    ))
+                    :Text(
                       widget.messages[index]['message'],
                       style: TextStyle(color: Colors.white),
                     )),

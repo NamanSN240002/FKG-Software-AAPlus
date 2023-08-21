@@ -1,7 +1,7 @@
 import 'package:http/http.dart';
 import 'dart:convert';
 
-const String urlendpoint = "http://4484-34-82-3-13.ngrok.io";
+const String urlendpoint = "http://cd8c-34-16-175-88.ngrok.io";
 
 class GetCategoryProd {
   late String category;

@@ -1,10 +1,10 @@
 import 'dart:convert';
-
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:recommender_app/utilities/messages.dart';
 import 'package:http/http.dart';
 
-const String urlendpoint = "http://7092-34-82-95-37.ngrok.io/getMessage3";
+const String urlendpoint = "http://6c97-34-105-73-136.ngrok.io/getMessage";
 
 class Chatbot extends StatefulWidget {
   const Chatbot({Key? key}) : super(key: key);
@@ -79,10 +79,14 @@ class _ChatbotState extends State<Chatbot> {
       setState(() {
         addMessage(text, true);
       });
+      int flg = 0;
+
       if (text == "List all product names") {
-        text = messages[messages.length - 1]['message'];
+        flg = 1;
+        text = messages[messages.length - 2]['message'];
+        text = "# " + text;
       }
-      text = "# " + text;
+
       Response response = await post(Uri.parse(urlendpoint),
           headers: <String, String>{
             'Content-Type': 'application/json; charset=UTF-8',
@@ -92,23 +96,48 @@ class _ChatbotState extends State<Chatbot> {
 
       if (response.statusCode == 404) return;
       var ret = jsonDecode(response.body);
-      setState(() {
-        var res = ret['data'][1];
-        var addString = "";
-        for (int i = 0; i < res.length; i++) {
-          if (res[i] == '<') break;
-          if (res[i] == 'U' && (res.length - i > 4)) {
-            if (res[i + 1] == 's' && res[i + 2] == 'e' && res[i + 3] == 'r')
-              break;
+      if(flg == 1)
+      {
+         setState(() {
+           var temp = ret['data'];
+           print(temp);
+           for(int i = 0  ; i < temp.length ; i++)
+           {
+              var res = temp[i];
+              var name = res.split('|')[0];
+              var url = res.split('|')[1];
+              addClickableMessage(name,url);
+           }
+         });
+      }
+      else
+      {
+        setState(() {
+          var res = ret['data'][1];
+          var addString = "";
+          int x = res.indexOf("User",0);
+          if( x == -1)
+          {
+            addMessage(res);
           }
-          addString += res[i];
-        }
-        addMessage(addString);
-      });
+          else
+          {
+             for(int i = 0 ; i < x  ; i++)
+             {
+                addString += res[i];
+             }
+             addMessage(addString);
+          }
+        });
+      }
     }
   }
 
   addMessage(String message, [bool isUserMessage = false]) {
     messages.add({'message': message, 'isUserMessage': isUserMessage});
+  }
+  addClickableMessage(String message , String url)
+  {
+      messages.add({'message': message, 'isUserMessage': false , 'url' : url});
   }
 }
