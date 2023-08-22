@@ -63,11 +63,11 @@ To run our code:
 
 These are the screeenshots for the url endpoint variable in the dart files :
 
-lib/chatbot.dart    --->
+lib/utilities/apiservices.dart    --->
 
 ![alt text](screenshots/SS1.png)
 
-lib/utilities/apiservices.dart    --->
+lib/chatbot.dart    --->
 
 ![alt text](screenshots/FKG_SS2.png)
 
