@@ -9,6 +9,7 @@ After running the app.run() in both collab notebooks, please paste the ngrok tun
 # GridKart
 
 ## Problem Statement :
+
 The aim is to enhance user experience by implementing a personalized product ranking system.
 Your task is to develop an algorithm or model that can generate accurate and relevant product
 rankings for individual users. The ranking system should consider factors such as user
@@ -16,9 +17,11 @@ preferences, past interactions, product popularity, and user similarity. It shou
 the most suitable products for a user based on their unique characteristics and preferences.
 
 ## Dataset :
+
 The dataset is taken from the official scraped flipkart product dataset. You can download the dataset from [here](https://www.kaggle.com/datasets/PromptCloudHQ/flipkart-products))
 
 ## Approach :
+
 The problem statement can be broken down into the following sub-problems:
 
 **Acquiring product, user and rating dataset:**
@@ -36,7 +39,7 @@ The problem statement can be broken down into the following sub-problems:
 
 **Giving recommendation to user based on purchase history and user similarity:**
 
- 	1) We use the concept of collaborative filtering to find user similarity
+    1) We use the concept of collaborative filtering to find user similarity
  	2) We generate cosine similarity between users and recommend top products based on it.
 
 **Providing a personalized recommendation:**
@@ -50,11 +53,39 @@ The problem statement can be broken down into the following sub-problems:
 
 To run our code:
 
+1. Clone the repository
+   ``git clone https://github.com/NamanSN240002/FKG-Software-AAPlus.git``
+2. Install the flutter dependencies
+   ``flutter pub get``
+3. Run both the ipynb files under ML_Models folder to initiate the backend pyhton server.
+4. Copy the code from the ngrok tunneling link and paste it in the variable urlendpoint of the pages chatbot.dart and apiservices.dart of the application.
 
+These are the screeenshots for the url endpoint variable in the dart files :
+
+lib/chatbot.dart    --->
+![alt text](screenshots\FKG_SS1.png)
+
+lib/utilities/apiservices.dart    --->
+![alt text](screenshots\FKG_SS2.png)
 
 ## App Inerface :
+Login Page -->
+![alt text](screenshots\FKG_Login_page.jpeg)
 
+Home Page -->
+![alt text](screenshots\FKG_Home_page.jpeg)
 
+Product Description Page -->
+![alt text](screenshots\FKG_Product_desc_page.jpeg)
+
+Category Page -->
+![alt text](screenshots\FKG_Category_page.jpeg)
+
+Profile Page -->
+![alt text](screenshots\FKG_Profile_page.jpeg)
+
+Chatbot Page -->
+![alt text](screenshots\FKG_Chatbot_page.jpeg)
 
 ## Libraries used :
     1) Pandas
@@ -64,26 +95,33 @@ To run our code:
     5) Flask
     6) Folium
     7) Statsmodels
+    8) Faker
+    9) Langchain
 
 ## Technical Aspects :
+
     1) Python
     2) Jupyter Notebooks
     3) Front-end : Flutter
     4) Back-end : Flask
+    5) Machine Learning : Collaborative Filtering, Cosine Similarity, Large Language Model(Falcon)
 
 ## Team Members :
+
     1) Naman Singh Nayal
     2) Aaryan Gupta
 
 ## Authors and Acknowledgement
 
 #### **Aaryan Gupta**
-[LinkedIn :necktie:](https://www.linkedin.com/in/aaryan-gupta-a881661b8/)
-[Github :floppy_disk:](https://github.com/Aaryan0424)
+
+[LinkedIn 👔](https://www.linkedin.com/in/aaryan-gupta-a881661b8/)
+[Github 💾](https://github.com/Aaryan0424)
 
 #### **Naman Singh Nayal**
-[LinkedIn :necktie:](https://www.linkedin.com/in/naman-singh-nayal-8364b5202/)
-[Github :floppy_disk:](https://github.com/NamanSN240002)
+
+[LinkedIn 👔](https://www.linkedin.com/in/naman-singh-nayal-8364b5202/)
+[Github 💾](https://github.com/NamanSN240002)
 
 &nbsp;
 
@@ -92,5 +130,5 @@ To run our code:
 A demo video can be found [here](https://youtu.be/2_ysbhiQd58)
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
 
+[MIT](https://choosealicense.com/licenses/mit/)
