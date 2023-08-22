@@ -1,7 +1,6 @@
 Instructions:
 
-You can access our video on youtube here :
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2_ysbhiQd58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![Watch the video](https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6.jpg)](https://www.youtube.com/embed/2_ysbhiQd58 "FKG_AA'Plus")
 
 You can access our complete project on github here : https://github.com/NamanSN240002/FKG-Software-AAPlus
 
