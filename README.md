@@ -73,22 +73,36 @@ lib/utilities/apiservices.dart    --->
 
 ## App Inerface :
 Login Page -->
-![alt text](screenshots/FKG_Login_page.jpeg)
+<p>
+<img src="screenshots/FKG_Login_page.jpeg" alt="alt text" width="220" height="400">
+<p>
 
 Home Page -->
-![alt text](screenshots/FKG_Home_page.jpeg)
+<p>
+<img src="screenshots/FKG_Home_page.jpeg" alt="alt text" width="220" height="400">
+<p>
 
 Product Description Page -->
-![alt text](screenshots/FKG_Product_desc_page.jpeg)
+<p>
+<img src="screenshots/FKG_Product_desc_page.jpeg" alt="alt text" width="220" height="400">
+<p>
 
 Category Page -->
-![alt text](screenshots/FKG_Category_page.jpeg)
+<p>
+<img src="screenshots/FKG_Profile_page.jpeg" alt="alt text" width="220" height="400">
+<p>
+
 
 Profile Page -->
-![alt text](screenshots/FKG_Profile_page.jpeg)
+<p>
+<img src="screenshots/FKG_Profile_page.jpeg" alt="alt text" width="220" height="400">
+<p>
+
 
 Chatbot Page -->
-![alt text](screenshots/FKG_Chatbot_page.jpeg)
+<p>
+<img src="screenshots/FKG_Chatbot_page.jpeg" alt="alt text" width="220" height="400">
+<p>
 
 ## Libraries used :
     1) Pandas
