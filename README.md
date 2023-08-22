@@ -89,7 +89,7 @@ Product Description Page -->
 
 Category Page -->
 <p>
-<img src="screenshots/FKG_Profile_page.jpeg" alt="alt text" width="220" height="400">
+<img src="screenshots/FKG_Category_page.jpeg" alt="alt text" width="220" height="400">
 <p>
 
 
