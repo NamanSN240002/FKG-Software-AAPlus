@@ -65,30 +65,30 @@ These are the screeenshots for the url endpoint variable in the dart files :
 
 lib/chatbot.dart    --->
 
-![alt text](screenshots\FKG_SS1.png)
+![alt text](screenshots/SS1.png)
 
 lib/utilities/apiservices.dart    --->
 
-![alt text](screenshots\FKG_SS2.png)
+![alt text](screenshots/FKG_SS2.png)
 
 ## App Inerface :
 Login Page -->
-![alt text](screenshots\FKG_Login_page.jpeg)
+![alt text](screenshots/FKG_Login_page.jpeg)
 
 Home Page -->
-![alt text](screenshots\FKG_Home_page.jpeg)
+![alt text](screenshots/FKG_Home_page.jpeg)
 
 Product Description Page -->
-![alt text](screenshots\FKG_Product_desc_page.jpeg)
+![alt text](screenshots/FKG_Product_desc_page.jpeg)
 
 Category Page -->
-![alt text](screenshots\FKG_Category_page.jpeg)
+![alt text](screenshots/FKG_Category_page.jpeg)
 
 Profile Page -->
-![alt text](screenshots\FKG_Profile_page.jpeg)
+![alt text](screenshots/FKG_Profile_page.jpeg)
 
 Chatbot Page -->
-![alt text](screenshots\FKG_Chatbot_page.jpeg)
+![alt text](screenshots/FKG_Chatbot_page.jpeg)
 
 ## Libraries used :
     1) Pandas
