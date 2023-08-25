@@ -72,7 +72,7 @@ lib/chatbot.dart    --->
 ![alt text](screenshots/FKG_SS2.png)
 
 ## App Inerface :
-<p>
+<p float="left">
 <img src="screenshots/FKG_Login_page.jpeg" alt="alt text" width="220" height="400">
 <img src="screenshots/FKG_Home_page.jpeg" alt="alt text" width="220" height="400">
 <img src="screenshots/FKG_Product_desc_page.jpeg" alt="alt text" width="220" height="400">
@@ -80,7 +80,6 @@ lib/chatbot.dart    --->
 <img src="screenshots/FKG_Profile_page.jpeg" alt="alt text" width="220" height="400">
 <p>
 <img src="screenshots/FKG_Chatbot_page.jpeg" alt="alt text" width="220" height="400">
-Home Page -->
 <p>
 
 ## Libraries used :
