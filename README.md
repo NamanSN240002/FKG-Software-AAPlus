@@ -73,13 +73,13 @@ lib/chatbot.dart    --->
 
 ## App Inerface :
 <p float="left">
-<img src="screenshots/FKG_Login_page.jpeg" alt="alt text" width="220" height="400">
-<img src="screenshots/FKG_Home_page.jpeg" alt="alt text" width="220" height="400">
+<img src="screenshots/FKG_Login_page.jpeg" alt="alt text" width="200" height="400">
+<img src="screenshots/FKG_Home_page.jpeg" alt="alt text" width="200" height="400">
 <img src="screenshots/FKG_Product_desc_page.jpeg" alt="alt text" width="220" height="400">
-<img src="screenshots/FKG_Category_page.jpeg" alt="alt text" width="220" height="400">
-<img src="screenshots/FKG_Profile_page.jpeg" alt="alt text" width="220" height="400">
+<img src="screenshots/FKG_Category_page.jpeg" alt="alt text" width="200" height="400">
+<img src="screenshots/FKG_Profile_page.jpeg" alt="alt text" width="200" height="400">
 <p>
-<img src="screenshots/FKG_Chatbot_page.jpeg" alt="alt text" width="220" height="400">
+<img src="screenshots/FKG_Chatbot_page.jpeg" alt="alt text" width="200" height="400">
 <p>
 
 ## Libraries used :
